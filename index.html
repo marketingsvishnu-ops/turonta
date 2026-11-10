@@ -3,281 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gaming Demo</title>
+<title>ICESUPER Demo</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
 
 body{
-    background:#140606;
-    color:#fff;
+  background:#0f1020;
+  color:white;
 }
 
 .container{
-    display:flex;
-    min-height:100vh;
+  display:flex;
+  min-height:100vh;
 }
 
 .demo{
-    width:70%;
-    background:#111;
+  width:70%;
+  background:#111;
 }
 
 iframe{
-    width:100%;
-    height:100vh;
-    border:none;
+  width:100%;
+  height:100vh;
+  border:none;
 }
 
 .right{
-    width:30%;
-    padding:30px 22px;
-    background:linear-gradient(180deg,#2b0000,#0d0000);
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  width:30%;
+  padding:30px 22px;
+  background:linear-gradient(180deg,#181a35,#0b0c18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .box{
-    width:100%;
-    background:#0b0b0b;
-    border:1px solid #ff2d2d;
-    border-radius:22px;
-    padding:26px 20px;
-    text-align:center;
-    box-shadow:0 0 30px rgba(255,0,0,.35);
+  width:100%;
+  background:rgba(10,10,10,.92);
+  border:1px solid #d4af37;
+  border-radius:22px;
+  padding:26px 20px;
+  text-align:center;
+  box-shadow:0 0 35px rgba(212,175,55,.35);
 }
 
 .badge{
-    display:inline-block;
-    background:#ff2d2d;
-    color:#fff;
-    padding:10px 22px;
-    border-radius:30px;
-    font-weight:bold;
-    margin-bottom:18px;
+  display:inline-block;
+  background:#d4af37;
+  color:#111;
+  padding:8px 18px;
+  border-radius:30px;
+  font-weight:800;
+  margin-bottom:16px;
 }
 
 h1{
-    color:#ff4040;
-    font-size:36px;
-    text-transform:uppercase;
-    margin-bottom:15px;
+  font-size:32px;
+  color:#ffd86b;
+  margin-bottom:10px;
+  text-transform:uppercase;
 }
 
 .sub{
-    color:#ddd;
-    line-height:1.6;
-    margin-bottom:24px;
-    font-size:17px;
+  font-size:17px;
+  line-height:1.5;
+  margin-bottom:22px;
+  color:#eee;
 }
 
 .features{
-    display:grid;
-    gap:14px;
-    margin:24px 0;
+  display:grid;
+  gap:12px;
+  margin:22px 0;
 }
 
 .feature{
-    background:linear-gradient(90deg,#1b1b1b,#3b0000);
-    border:1px solid rgba(255,50,50,.6);
-    border-radius:14px;
-    padding:15px;
-    font-size:18px;
-    font-weight:bold;
+  background:linear-gradient(90deg,#1b1b1b,#2b2208);
+  border:1px solid rgba(212,175,55,.6);
+  padding:14px;
+  border-radius:14px;
+  font-size:17px;
+  font-weight:700;
 }
 
 .feature span{
-    color:#ff4d4d;
+  color:#ffd86b;
 }
 
 .website-row{
-    display:flex;
-    justify-content:space-between;
-    margin-top:18px;
-    font-weight:bold;
-    gap:10px;
-    flex-wrap:wrap;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-top:16px;
+  font-size:14px;
+  font-weight:bold;
 }
 
 .website-row a{
-    text-decoration:none;
+  text-decoration:none;
 }
 
 .website{
-    color:#25D366;
+  color:#25D366;
 }
 
 .whatsapp-small{
-    color:#ff4d4d;
+  color:#ffd86b;
 }
 
 .cta{
-    display:block;
-    margin-top:24px;
-    background:#25D366;
-    color:#fff;
-    text-decoration:none;
-    padding:18px;
-    border-radius:15px;
-    font-size:22px;
-    font-weight:bold;
-    transition:.3s;
-    box-shadow:0 0 18px rgba(37,211,102,.4);
+  display:block;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  padding:17px;
+  border-radius:16px;
+  font-size:20px;
+  font-weight:900;
+  margin-top:22px;
+  box-shadow:0 8px 18px rgba(37,211,102,.35);
+  transition:.3s;
 }
 
 .cta:hover{
-    background:#1ebe5d;
-    transform:scale(1.03);
+  transform:scale(1.03);
+  background:#1ebe5d;
 }
 
 .trust{
-    margin-top:18px;
-    color:#ccc;
-    line-height:1.7;
+  margin-top:16px;
+  color:#ccc;
+  font-size:14px;
+  line-height:1.5;
 }
 
 .footer{
-    margin-top:20px;
-    color:#888;
-    font-size:12px;
+  margin-top:18px;
+  font-size:12px;
+  color:#aaa;
+  line-height:1.5;
 }
 
-/* MOBILE */
-@media (max-width:768px){
-
-.container{
-    flex-direction:column-reverse; /* Contact first, Demo below */
-}
-
-.demo,
-.right{
-    width:100%;
-}
-
-iframe{
-    height:500px;
-}
-
-.right{
-    padding:20px;
-}
-
-h1{
-    font-size:28px;
-}
-
-.sub{
-    font-size:16px;
-}
-
-.feature{
-    font-size:16px;
-}
-
-.cta{
-    font-size:20px;
-    padding:16px;
-}
-
-.website-row{
+@media(max-width:768px){
+  .container{
     flex-direction:column;
-    align-items:center;
-    gap:12px;
+  }
+
+  .demo,
+  .right{
+    width:100%;
+  }
+
+  iframe{
+    height:500px;
+  }
+
+  .right{
+    padding:20px;
+  }
 }
 
+@media(max-width:480px){
+  h1{
+    font-size:26px;
+  }
+
+  .sub{
+    font-size:16px;
+  }
+
+  .feature{
+    font-size:16px;
+    padding:12px;
+  }
+
+  .cta{
+    font-size:18px;
+    padding:15px;
+  }
+
+  .website-row{
+    flex-direction:column;
+    gap:8px;
+  }
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- Demo Section -->
-    <div class="demo">
-        <iframe src="https://www.iceexchange.in/"></iframe>
-    </div>
+  <div class="demo">
+    <iframe src="https://icesuper.info/"></iframe>
+  </div>
 
-    <!-- Contact Section -->
-    <div class="right">
+  <div class="right">
+    <div class="box">
 
-        <div class="box">
+      <div class="badge">ICESUPER OFFICIAL</div>
 
-            <div class="badge">
-                VIP Manual ID Available
-            </div>
+      <h1>ICESUPER WHITELABEL &amp; MASTER AVAILABLE</h1>
 
-            <h1>GET YOUR ID NOW</h1>
+      <p class="sub">
+        Get your Icesuper Whitelabel and Master Panel
+        in the cheapest rate.
+      </p>
 
-            <p class="sub">
-                Fast manual ID service with easy deposit support.
-                New users can start quickly through WhatsApp.
-            </p>
-
-            <div class="features">
-
-                <div class="feature">
-                    Minimum Deposit:
-                    <span>₹100 Only</span>
-                </div>
-
-                <div class="feature">
-                    Welcome Bonus:
-                    <span>10%</span>
-                </div>
-
-                <div class="feature">
-                    Manual ID Support:
-                    <span>WhatsApp Only</span>
-                </div>
-
-                <div class="feature">
-                    Quick Help:
-                    <span>Deposit &amp; Withdrawal Support</span>
-                </div>
-
-            </div>
-
-            <div class="website-row">
-
-                <a class="website" href="https://www.iceexchange.in" target="_blank">
-                    🌐 www.iceexchange.in
-                </a>
-
-                <a class="whatsapp-small"
-                   href="https://wa.me/+447767776214
-                   target="_blank">
-                    💬 WhatsApp
-                </a>
-
-            </div>
-
-            <a class="cta"
-               href="https://wa.me/+447767776214?text=Hello%20I%20want%20new%20manual%20ID"
-               target="_blank">
-                📲 WhatsApp Now
-            </a>
-
-            <div class="trust">
-                ✅ Trusted Manual Support<br>
-                ✅ Simple Process<br>
-                ✅ Fast Response
-            </div>
-
-            <div class="footer">
-                18+ Only | Play Responsibly | Follow Your Local Laws | T&amp;C Apply
-            </div>
-
+      <div class="features">
+        <div class="feature">
+          Whitelabel: <span>Available Now</span>
         </div>
 
+        <div class="feature">
+          Master Panel: <span>Available Now</span>
+        </div>
+
+        <div class="feature">
+          Cheapest Rate: <span>Best Price</span>
+        </div>
+
+        <div class="feature">
+          Website: <span>icesuper.info</span>
+        </div>
+      </div>
+
+      <div class="website-row">
+        <a class="website" href="https://icesuper.info/" target="_blank">
+          🌐 icesuper.info
+        </a>
+
+        <a class="whatsapp-small" href="https://wa.me/+447767775396" target="_blank">
+          💬 WhatsApp
+        </a>
+      </div>
+
+      <a class="cta"
+         href="https://wa.me/+447767775396?text=Hello%20I%20want%20Icesuper%20Whitelabel%20or%20Master"
+         target="_blank">
+        📲 WhatsApp Now
+      </a>
+
+      <p class="trust">
+        ✅ Check our website on left side<br>
+        ✅ Direct WhatsApp support<br>
+        ✅ Cheapest rate available<br>
+        📞 +447767775396
+      </p>
+
+      <div class="footer">
+        Icesuper Whitelabel &amp; Master Available | Contact on WhatsApp
+      </div>
+
     </div>
+  </div>
 
 </div>
 
