@@ -1,3 +1,5 @@
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,4 +96,288 @@ section{padding:105px 7%}
 .p2 .art-shape{background:var(--orange);border-radius:0;transform:rotate(45deg)}
 .p2 .art-shape:after{transform:rotate(-80deg)}
 .p3 .art-shape{background:var(--lime);clip-path:polygon(50% 0,100% 100%,0 100%);border-radius:0}
-.p
+.p3 .art-shape:after{border:0;background:var(--dark);width:30px;height:100px;left:63px;top:45px}
+.program-content{padding:27px}
+.program-content small{font-size:10px;font-weight:900;letter-spacing:2px;color:var(--orange)}
+.program-content h3{font:38px Anton;margin:10px 0}
+.program-content p{color:#70766b;font-size:13px;line-height:1.8}
+.program-content a{display:inline-block;font-size:10px;font-weight:900;letter-spacing:1px;margin-top:20px;border-bottom:2px solid var(--dark);padding-bottom:5px}
+.manifesto{
+ background:var(--dark);color:var(--cream);display:grid;
+ grid-template-columns:1fr 1fr;gap:60px;align-items:center
+}
+.manifesto-visual{min-height:470px;background:var(--green);position:relative;overflow:hidden;display:grid;place-items:center}
+.manifesto-visual:before{
+ content:"";width:280px;height:280px;border:35px solid var(--lime);
+ border-radius:50%;position:absolute;animation:spin 25s linear infinite
+}
+.manifesto-visual:after{
+ content:"";position:absolute;width:190px;height:350px;
+ background:var(--orange);transform:rotate(45deg);mix-blend-mode:screen
+}
+.manifesto-word{font:70px Anton;z-index:2;text-align:center;color:white}
+.manifesto-copy h2{font:clamp(55px,7vw,90px)/.85 Anton}
+.manifesto-copy p{font-size:14px;line-height:2;color:#adb6aa;margin:28px 0}
+.manifesto-list{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.manifesto-list div{font-size:12px;font-weight:800}
+.manifesto-list span{color:var(--lime);margin-right:8px}
+.pricing{background:#dedbce}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.plan{background:var(--cream);padding:32px;border:1px solid #d0cebf}
+.plan.featured{background:var(--green);color:white;transform:translateY(-12px)}
+.plan h3{font:38px Anton}
+.plan .price{font:55px Anton;margin:24px 0}
+.plan .price small{font:12px 'DM Sans';opacity:.7}
+.plan>p{font-size:10px;font-weight:900;letter-spacing:2px;color:var(--orange)}
+.plan ul{list-style:none;margin:25px 0 30px;font-size:13px;line-height:3}
+.plan li:before{content:"✦";color:var(--orange);margin-right:10px}
+.plan .btn{width:100%;text-align:center}
+.plan.featured .btn{background:var(--lime);color:var(--dark);border-color:var(--lime)}
+.bmi-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.bmi-layout h2{font:clamp(60px,8vw,100px)/.85 Anton}
+.bmi-layout p{font-size:14px;line-height:1.9;color:#72766b;margin-top:25px}
+.calculator{background:#dedbce;padding:35px}
+.field{margin-bottom:20px}
+.field label{display:block;font-size:10px;font-weight:900;letter-spacing:2px;margin-bottom:9px}
+.field input{width:100%;padding:15px;background:var(--cream);border:1px solid #c9c8ba;font:16px 'DM Sans';outline:none}
+.field input:focus{border-color:var(--green)}
+.calculator button{width:100%}
+.result{display:none;background:var(--green);color:white;padding:20px;margin-top:20px}
+.result strong{font:45px Anton;display:block;color:var(--lime)}
+.cta{background:var(--orange);text-align:center;padding:100px 7%;overflow:hidden}
+.cta h2{font:clamp(75px,12vw,150px)/.78 Anton;color:var(--dark)}
+.cta p{font-size:15px;line-height:1.8;max-width:440px;margin:30px auto}
+.cta .btn{background:var(--dark);border-color:var(--dark)}
+footer{background:var(--dark);color:var(--cream);padding:60px 7% 25px}
+.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:45px}
+.foot-logo{font:45px Anton}
+.foot-logo span{color:var(--lime)}
+.foot-top p{color:#aeb6a9;font-size:12px;margin-top:10px}
+.foot-links{display:flex;gap:25px;align-items:center;flex-wrap:wrap;font-size:12px}
+.foot-links a:hover{color:var(--lime)}
+.foot-bottom{border-top:1px solid #455347;padding-top:20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#aeb6a9;font-size:11px}
+.reveal{opacity:0;transform:translateY(25px);transition:.8s}
+.reveal.show{opacity:1;transform:translateY(0)}
+@media(max-width:850px){
+ .hero{grid-template-columns:1fr}.hero-art{height:430px}
+ .programs,.plans{grid-template-columns:1fr 1fr}
+ .manifesto,.bmi-layout{grid-template-columns:1fr}
+ .plan.featured{transform:none}
+}
+@media(max-width:600px){
+ nav{padding:0 5%;height:70px}
+ .logo{font-size:30px}
+ .menu{display:block}
+ .links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--cream);padding:25px;flex-direction:column;align-items:stretch}
+ .links.open{display:flex}
+ .hero{padding:65px 6% 40px}
+ h1{font-size:85px}
+ .hero-art{height:350px;transform:scale(.85)}
+ .arch{width:250px;height:350px}
+ .stats{grid-template-columns:1fr 1fr;padding:35px 6%}
+ section{padding:75px 6%}
+ .section-head{display:block}
+ .section-head p{margin-top:20px}
+ .programs,.plans{grid-template-columns:1fr}
+ .manifesto-visual{min-height:330px}
+ .manifesto-word{font-size:55px}
+ .manifesto-list{grid-template-columns:1fr}
+ .calculator{padding:23px}
+ .cta h2{font-size:85px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <a href="#" class="logo">MONO<span>LITH.</span></a>
+ <button class="menu" id="menu" aria-label="Toggle menu">☰</button>
+ <div class="links" id="links">
+  <a href="#training">TRAINING</a>
+  <a href="#story">OUR CULTURE</a>
+  <a href="#membership">MEMBERSHIP</a>
+  <a href="#bmi">BMI CHECK</a>
+  <a href="#membership" class="nav-cta">JOIN THE MOVEMENT ↗</a>
+ </div>
+</nav>
+
+<header class="hero">
+ <div class="hero-copy">
+  <div class="kicker">STRENGTH IS A LIFESTYLE — EST. 2012</div>
+  <h1>BUILT<br>BY <span>EFFORT.</span></h1>
+  <p>A training space for people who believe in showing up, putting in the work and becoming stronger every single day.</p>
+  <a href="#membership" class="btn">FIND YOUR MEMBERSHIP ↗</a>
+  <a href="#training" class="btn btn-light">EXPLORE TRAINING</a>
+ </div>
+ <div class="hero-art">
+  <div class="arch"></div>
+  <div class="block"></div>
+  <div class="hero-sticker">STAY<br>STRONG<br>✦ MOVE</div>
+  <div class="hero-number">001</div>
+ </div>
+</header>
+
+<div class="marquee"><div class="marquee-inner">
+ <span>DISCIPLINE OVER MOTIVATION ✦ STRENGTH THROUGH ACTION ✦ BUILT NOT GIVEN ✦ </span>
+ <span>DISCIPLINE OVER MOTIVATION ✦ STRENGTH THROUGH ACTION ✦ BUILT NOT GIVEN ✦ </span>
+</div></div>
+
+<div class="stats">
+ <div class="stat"><strong>12+</strong><p>YEARS OF EXPERIENCE</p></div>
+ <div class="stat"><strong>30+</strong><p>EXPERT TRAINERS</p></div>
+ <div class="stat"><strong>50+</strong><p>WEEKLY CLASSES</p></div>
+ <div class="stat"><strong>4K</strong><p>ACTIVE MEMBERS</p></div>
+</div>
+
+<section id="training">
+ <div class="section-head reveal">
+  <div><div class="eyebrow">01 / FIND YOUR STRENGTH</div><h2>THE WORK<br>STARTS HERE.</h2></div>
+  <p>Choose your discipline. Commit to the process. Let the results speak for themselves.</p>
+ </div>
+ <div class="programs">
+  <article class="program reveal">
+   <div class="program-art p1"><div class="art-shape"></div></div>
+   <div class="program-content"><small>01 — STRENGTH</small><h3>IRON WORKS</h3><p>Progressive strength training, free weights and structured muscle-building programs.</p><a href="#membership">EXPLORE PROGRAM ↗</a></div>
+  </article>
+  <article class="program reveal">
+   <div class="program-art p2"><div class="art-shape"></div></div>
+   <div class="program-content"><small>02 — CONDITIONING</small><h3>ENGINE ROOM</h3><p>Build stamina, improve cardiovascular fitness and challenge your limits.</p><a href="#membership">EXPLORE PROGRAM ↗</a></div>
+  </article>
+  <article class="program reveal">
+   <div class="program-art p3"><div class="art-shape"></div></div>
+   <div class="program-content"><small>03 — MOVEMENT</small><h3>GROUND ZERO</h3><p>Functional training, mobility and athletic movement for everyday performance.</p><a href="#membership">EXPLORE PROGRAM ↗</a></div>
+  </article>
+ </div>
+</section>
+
+<section class="manifesto" id="story">
+ <div class="manifesto-visual reveal"><div class="manifesto-word">NO<br>SHORTCUTS.</div></div>
+ <div class="manifesto-copy reveal">
+  <div class="eyebrow" style="color:var(--lime)">02 / THE MONOLITH MINDSET</div>
+  <h2>SHOW UP.<br>DO THE WORK.</h2>
+  <p>We are not here to sell quick fixes. We are here to create a culture of consistency, confidence and real progress. Our coaches, community and training environment are designed to help you build habits that last.</p>
+  <div class="manifesto-list">
+   <div><span>✦</span> EXPERT COACHING</div>
+   <div><span>✦</span> PREMIUM EQUIPMENT</div>
+   <div><span>✦</span> SUPPORTIVE COMMUNITY</div>
+   <div><span>✦</span> PERSONAL PROGRAMS</div>
+  </div>
+ </div>
+</section>
+
+<section id="membership" class="pricing">
+ <div class="section-head reveal">
+  <div><div class="eyebrow">03 / YOUR COMMITMENT</div><h2>CHOOSE YOUR<br>PATH.</h2></div>
+  <p>Simple memberships. Serious training. Pick the plan that matches your ambition.</p>
+ </div>
+ <div class="plans">
+  <article class="plan reveal">
+   <h3>FOUNDATION</h3><div class="price">199<small> AED / MONTH</small></div>
+   <p>START STRONG</p>
+   <ul><li>Full gym access</li><li>Equipment access</li><li>Locker facilities</li><li>Initial assessment</li></ul>
+   <a class="btn" href="mailto:hello@monolithgym.com">CHOOSE PLAN ↗</a>
+  </article>
+  <article class="plan featured reveal">
+   <h3>BUILDER ✦</h3><div class="price">299<small> AED / MONTH</small></div>
+   <p>BUILD YOUR ROUTINE</p>
+   <ul><li>All Foundation benefits</li><li>Unlimited group classes</li><li>Monthly coach session</li><li>Recovery area access</li></ul>
+   <a class="btn" href="mailto:hello@monolithgym.com">CHOOSE PLAN ↗</a>
+  </article>
+  <article class="plan reveal">
+   <h3>MONOLITH</h3><div class="price">449<small> AED / MONTH</small></div>
+   <p>THE COMPLETE EXPERIENCE</p>
+   <ul><li>All Builder benefits</li><li>Personal training session</li><li>Priority class booking</li><li>Nutrition consultation</li></ul>
+   <a class="btn" href="mailto:hello@monolithgym.com">CHOOSE PLAN ↗</a>
+  </article>
+ </div>
+</section>
+
+<section id="bmi">
+ <div class="bmi-layout">
+  <div class="reveal">
+   <div class="eyebrow">04 / YOUR STARTING POINT</div>
+   <h2>MEASURE.<br>UNDERSTAND.<br>IMPROVE.</h2>
+   <p>Use our BMI calculator to estimate your body mass index. Remember, BMI is a general screening measure and does not account for muscle mass or individual health factors.</p>
+  </div>
+  <div class="calculator reveal">
+   <div class="field"><label>WEIGHT (KG)</label><input id="weight" type="number" min="1" max="500" placeholder="Example: 80"></div>
+   <div class="field"><label>HEIGHT (CM)</label><input id="height" type="number" min="50" max="250" placeholder="Example: 180"></div>
+   <button class="btn" onclick="calculateBMI()">CALCULATE BMI ↗</button>
+   <div class="result" id="result" aria-live="polite"></div>
+  </div>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="eyebrow" style="color:var(--dark)">YOUR TIME IS NOW</div>
+ <h2>MAKE<br>YOURSELF<br>STRONGER.</h2>
+ <p>Stop waiting for the perfect moment. Walk in, start moving and build something that lasts.</p>
+ <a href="mailto:hello@monolithgym.com" class="btn">BECOME A MEMBER ↗</a>
+</section>
+
+<footer>
+ <div class="foot-top">
+  <div><a href="#" class="foot-logo">MONO<span>LITH.</span></a><p>STRENGTH CULTURE. BUILT TO LAST.</p></div>
+  <div class="foot-links">
+   <a href="#training">Training</a><a href="#story">Our Culture</a>
+   <a href="#membership">Membership</a><a href="#bmi">BMI Calculator</a>
+  </div>
+ </div>
+ <div class="foot-bottom">
+  <span>© 2026 MONOLITH FITNESS. ALL RIGHTS RESERVED.</span>
+  <span>BUILT BY EFFORT.</span>
+ </div>
+</footer>
+
+<script>
+const menu=document.getElementById('menu');
+const links=document.getElementById('links');
+
+menu.addEventListener('click',()=>{
+ links.classList.toggle('open');
+ menu.textContent=links.classList.contains('open')?'✕':'☰';
+});
+
+document.querySelectorAll('.links a').forEach(a=>{
+ a.addEventListener('click',()=>{
+  links.classList.remove('open');
+  menu.textContent='☰';
+ });
+});
+
+function calculateBMI(){
+ const w=parseFloat(document.getElementById('weight').value);
+ const h=parseFloat(document.getElementById('height').value);
+ const result=document.getElementById('result');
+
+ if(!w||!h||w<=0||w>500||h<50||h>250){
+  result.style.display='block';
+  result.innerHTML='Please enter valid height and weight.';
+  return;
+ }
+
+ const bmi=w/((h/100)**2);
+ let category='Obesity range';
+ if(bmi<18.5)category='Underweight range';
+ else if(bmi<25)category='Healthy weight range';
+ else if(bmi<30)category='Overweight range';
+
+ result.style.display='block';
+ result.innerHTML='<strong>'+bmi.toFixed(1)+'</strong>'+category+
+ '<br><small>BMI is a screening measure, not a diagnosis.</small>';
+}
+
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add('show');
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:.12});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
+```
